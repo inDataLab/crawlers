@@ -1,7 +1,7 @@
 #The multiprocessing version
 #designed by Soo Min, Jeong
 
-from shop11st_Crawler_v6 import access
+from "#IMPORT THE MAIN VERSION" import access
 from selenium import webdriver
 
 from time import time, strftime
@@ -16,7 +16,7 @@ def main(args):
 
     totalReviews = 0
 
-    for eachDeal in box_pd[50:]:
+    for eachDeal in box_pd:
         url = eachDeal.find_element_by_tag_name('a').get_attribute('href')
         args[1] = url
         totalReviews += access(args)
